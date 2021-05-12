@@ -4,7 +4,7 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min - 1)) + min;
 }
 
-var squadre = [
+const squadre = [
     {
         nome: "Milan",
         puntiFatti: 0,
@@ -27,20 +27,19 @@ var squadre = [
     },
 ];
 
-for (var i = 0; i < squadre.length; i++) {
+for (let i = 0; i < squadre.length; i++) {
     squadre[i].puntiFatti = randomNumber(50, 100);
     squadre[i].falliSubiti = randomNumber(1000, 2000);
 }
 console.log(squadre);
 
-var nuovoArray = [];
+const nuovoArray = [];
 
-for (var j = 0; j < squadre.length; j++) {
+for (let j = 0; j < squadre.length; j++) {
 
-    const {nome} = squadre[j];
-    const {falliSubiti} = squadre[j];
+    const {nome, falliSubiti} = squadre[j];
 
-    var nuovoOggetto = {
+    const nuovoOggetto = {
         nome,
         falliSubiti
     }
